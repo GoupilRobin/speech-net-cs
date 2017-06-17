@@ -131,9 +131,7 @@ The total number of sentences ![alt text](https://latex.codecogs.com/gif.latex?\
 
 To sumarize, be careful when using __Optionals__ made of __Phrases__ with a large number of permutations as these are in the end generating the most sentences.
 
-To give you an example:
-With a 100 __Phrases__ (with 1 to 2 average number of __Optionals__ per __Phrase__) used in 7 __Sentences__ each heavily using __Values__ and __Optionals__, I have over 50k unique sentences generated, resulting in 1.2k unique semantic sentences.
-
+To see the number of semantic sentences and actual number of sentences sent to the Speech Engine, you can examinate the value of `splittedSentences.Count` and `choichesCount` in the file __MarvinServer:SpeechToText.cs__ at the end of the function `private void UpdateGrammar()`.
 
 ### TODO:
 - MarvinConsumer to use external grammar in XML or JSON for faster iterations and the possibility for the final user to modify it (modding <3)
