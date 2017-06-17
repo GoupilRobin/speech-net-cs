@@ -140,5 +140,6 @@ With a 100 __Phrases__ (with 1 to 2 average number of __Optionals__ per __Phrase
 - Send both the understood text and the semantic text on speech recognized
 - Allow to read the speech catched by the __Anything__ in the Phrase and Sentence syntax - may be useful in case the user has a free choice such as number or color.  
 Maybe with seperate syntax such as `new Phrase("prompt_number", "...{number}")` used like this `new Sentence("set width ?to prompt_number measure_unit")`.
+- Add repeater to the Sentence and Phrase syntax such as the Regex one `new Sentence("(cmd_open|cmd_follow){2}")` to repeat the group 2 times and `new Sentence("(cmd_open|cmd_follow){1,3}")` to repeat between 1 to 3 times for instance (for 0 times as minimum, just make it optional)
 - Unity Server process spawner to observe a cooldown or a max retry count, followed by an event to inform external components (e.g. show error message to user that something is wrong with the Marvin Server)
 - Better connection integrity detection. A simple ping should already help a lot
