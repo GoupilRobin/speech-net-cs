@@ -17,10 +17,6 @@ Please feel free to send PR if you happen to improve this - I give no warranty r
 
 # How to setup
 
-## Interface
-I strongly suggest adding the __MarvinInterface__ project to your Visual Studio Unity project.
-If needed, replace the path in the post-build event of the __MarvinInterface__ project to copy the binary to the correct place.
-
 ## Unity Interface
 Copy/paste the files __MarvinConsumer.cs__ and __MarvinStarter.cs__ from __Interface/Unity/__ into your Unity project's assets.
 __MarvinStarter__ is a component that spawn the __Server__ process. You must specify the path relative to the project asset data folder to the binary in the component.
@@ -28,7 +24,11 @@ __MarvinConsumer__ is a component to connect to the __Server__, send the grammar
 
 Both components need to be present on an entity in the scene - putting more than one of each will result in the random destruction of the components until there is no more than one of each.
 
-## Server
+## Marvin Interface
+I strongly suggest adding the __MarvinInterface__ project to your Visual Studio Unity project.
+If needed, replace the path in the post-build event of the __MarvinInterface__ project to copy the binary to the correct place.
+
+## Marvin Server
 I strongly suggest adding the __MarvinServer__ project to your Visual Studio Unity project.
 If needed, replace the path in the post-build event of the __MarvinServer__ project to copy the binary to the correct place.
 Add a reference to the __MarvinInterface__ project.
