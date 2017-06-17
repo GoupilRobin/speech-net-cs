@@ -1,7 +1,7 @@
 # speech-net-cs
 A .NET server that start a speech recognition using grammar provided by the client.
 
-It was created for a Unity project that required offline speech recognition.
+It was created for a Unity project that required offline speech recognition and I wanted to make use of the Microsoft Speech Engine to test its capabilities.
 The .NET System.Speech assembly start from .NET 3.0, whereas Unity only use 2.0 .NET assemblies (maybe 2.5 but that is still not good enough for me).
 I created a separate binary, spawned by the Unity project, that communicate with a MonoBehaviour running in the project using TCP.
 
@@ -151,3 +151,5 @@ Maybe with seperate syntax such as `new Phrase("prompt_number", "...{number}")` 
 - Add repeater to the Sentence and Phrase syntax such as the Regex one `new Sentence("(cmd_open|cmd_follow){2}")` to repeat the group 2 times and `new Sentence("(cmd_open|cmd_follow){1,3}")` to repeat between 1 to 3 times for instance (for 0 times as minimum, just make it optional)
 - Unity Server process spawner to observe a cooldown or a max retry count, followed by an event to inform external components (e.g. show error message to user that something is wrong with the Marvin Server)
 - Better connection integrity detection. A simple ping should already help a lot
+- Add an abstract layer between the Server and the speech recognition to allow adding other speech libraries
+- Evaluate alternate offline speech engine such as CMUSphinx
