@@ -1,7 +1,7 @@
 # speech-net-cs
 A .NET server that start a speech recognition using grammar provided by the client.
 
-It was created for a Unity project that required offline speech recognition and I wanted to make use of the Microsoft Speech Engine to test its capabilities.
+It was created for a Unity project that required offline speech recognition and the Speech-to-Text UnityLabs solution was a real pain to setup. I also needed to generate the grammar from alternatives and the .NET Choiches and GrammarBuilder looked like a good fit.
 The .NET System.Speech assembly start from .NET 3.0, whereas Unity only use 2.0 .NET assemblies (maybe 2.5 but that is still not good enough for me).
 I created a separate binary, spawned by the Unity project, that communicate with a MonoBehaviour running in the project using TCP.
 
