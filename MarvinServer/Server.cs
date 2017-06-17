@@ -44,7 +44,10 @@ namespace Marvin
 
                 if (payload.Length < Configuration.MaxPayloadLength)
                 {
-                    m_CurrentClient.Client.Send(payload);
+                    SocketAsyncEventArgs sendAsyncArg = new SocketAsyncEventArgs();
+                    sendAsyncArg.SetBuffer(payload, 0, payload.Length);
+
+                    m_CurrentClient.Client.SendAsync(sendAsyncArg);
                 }
                 else
                 {
