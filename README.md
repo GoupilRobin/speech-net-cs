@@ -90,7 +90,7 @@ A more complex sentence could be:
 ```C#
 Sentence sentence = new Sentence("... ?(subject_all|subject_this) (cmd_open|cmd_lightstick) cmd_follow");
 ```
-Resulting in the following permutations, where each word could be pointing to one or multiple phrases:
+Resulting in the following permutations, where each word could be pointing to one or multiple phrases (resulting in even more sentences handed to the Speech Engine):
 - ... subject_all cmd_open cmd_follow
 - ... subject_all cmd_lightstick cmd_follow
 - ... subject_this cmd_open cmd_follow
