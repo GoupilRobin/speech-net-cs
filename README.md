@@ -17,16 +17,16 @@ Please feel free to send PR if you happen to improve this - I give no warranty r
 
 # How to setup
 
-## Unity
+## Interface
+I strongly suggest adding the MarvinInterface/MarvinInterface project to the Unity project in Visual studio.
+If needed, replace the path in thepost-build event of the MarvinInterface project to copy the binary to the correct place.
+
+## Unity Interface
 Copy/paste the files MarvinConsumer.cs and MarvinStarter.cs from Unity/Marvin into your Unity project's assets.
 MarvinStarter is a component that spawn the Server process. You must specify the path relative tot he project asset data folder to the binary in the component.
 MarvinConsumer is a component to connect to the Server, send the grammar and receive the semantic when speech is recognized.
 
 Both components need to be present on an entity in the scene - putting more than one of each will result in the random destruction of the components until there is no more than one of each.
-
-## Interface
-I strongly suggest adding the MarvinInterface/MarvinInterface project to the Unity project in Visual studio.
-If needed, replace the path in thepost-build event of the MarvinInterface project to copy the binary to the correct place.
 
 ## Server
 I strongly suggest adding the Marvin/MarvinServer project to the Unity project in Visual studio.
