@@ -25,11 +25,11 @@ __MarvinConsumer__ is a component to connect to the __Server__, send the grammar
 Both components need to be present on an entity in the scene - putting more than one of each will result in the random destruction of the components until there is no more than one of each.
 
 ## Marvin Interface
-I strongly suggest adding the __MarvinInterface__ project to your Visual Studio Unity project.
+I strongly suggest adding the __MarvinInterface__ project to your Visual Studio Unity project.  
 If needed, replace the path in the post-build event of the __MarvinInterface__ project to copy the binary to the correct place.
 
 ## Marvin Server
-I strongly suggest adding the __MarvinServer__ project to your Visual Studio Unity project.
+I strongly suggest adding the __MarvinServer__ project to your Visual Studio Unity project.  
 If needed, replace the path in the post-build event of the __MarvinServer__ project to copy the binary to the correct place.
 Add a reference to the __MarvinInterface__ project.
 
