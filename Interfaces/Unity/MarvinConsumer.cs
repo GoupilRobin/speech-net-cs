@@ -19,7 +19,7 @@ public class MarvinConsumer : MonoBehaviour
 
     void Awake()
     {
-        if (FindObjectsOfType<MarvinConsumer>().Length > 0)
+        if (FindObjectsOfType<MarvinConsumer>().Length > 1)
         {
             UnityEngine.Debug.LogError("More than one MarvinConsumer found in the scene, destroying randomly");
             DestroyImmediate(this);
@@ -274,6 +274,10 @@ public class MarvinConsumer : MonoBehaviour
 
     private void OnHandshakeDone(object sender, SocketAsyncEventArgs e)
     {
-        m_ConnectionEstablished = true;
+        // make sure we are still connected to the server - might've dropped because the API version is too old
+        if (m_TcpClient.Connected)
+        {
+            m_ConnectionEstablished = true;
+        }
     }
 }

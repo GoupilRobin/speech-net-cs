@@ -129,6 +129,12 @@ namespace Marvin
             
             HandshakeRequest handshakeRequest = Utils.Deserialize<HandshakeRequest>(buffer);
 
+            if (handshakeRequest.ApiVersion < Configuration.MinApiVersion)
+            {
+                Console.WriteLine("Error: incompatible API version, exiting");
+                Environment.Exit(2);
+            }
+
             List<Phrase> phrases = handshakeRequest.Phrases;
             foreach (Phrase phrase in phrases)
             {

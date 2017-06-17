@@ -12,7 +12,7 @@ public class MarvinStarter : MonoBehaviour
 
     void Awake()
     {
-        if (FindObjectsOfType<MarvinStarter>().Length > 0)
+        if (FindObjectsOfType<MarvinStarter>().Length > 1)
         {
             UnityEngine.Debug.LogError("More than one MarvinStarter found in the scene, destroying randomly");
             DestroyImmediate(this);
