@@ -18,28 +18,29 @@ Please feel free to send PR if you happen to improve this - I give no warranty r
 # How to setup
 
 ## Interface
-I strongly suggest adding the MarvinInterface/MarvinInterface project to the Unity project in Visual studio.
-If needed, replace the path in thepost-build event of the MarvinInterface project to copy the binary to the correct place.
+I strongly suggest adding the __MarvinInterface__ project to your Visual Studio Unity project.
+If needed, replace the path in the post-build event of the __MarvinInterface__ project to copy the binary to the correct place.
 
 ## Unity Interface
-Copy/paste the files MarvinConsumer.cs and MarvinStarter.cs from Interface/Unity into your Unity project's assets.
-MarvinStarter is a component that spawn the Server process. You must specify the path relative tot he project asset data folder to the binary in the component.
-MarvinConsumer is a component to connect to the Server, send the grammar and receive the semantic when speech is recognized.
+Copy/paste the files __MarvinConsumer.cs__ and __MarvinStarter.cs__ from __Interface/Unity/__ into your Unity project's assets.
+__MarvinStarter__ is a component that spawn the __Server__ process. You must specify the path relative to the project asset data folder to the binary in the component.
+__MarvinConsumer__ is a component to connect to the __Server__, send the grammar and receive the semantic when speech is recognized.
 
 Both components need to be present on an entity in the scene - putting more than one of each will result in the random destruction of the components until there is no more than one of each.
 
 ## Server
-I strongly suggest adding the MarvinServer/MarvinServer project to the Unity project in Visual studio.
-If needed, replace the path in thepost-build event of the MarvinInterface project to copy the binary to the correct place.
-Add a reference to the MarvinInterface project.
+I strongly suggest adding the __MarvinServer__ project to your Visual Studio Unity project.
+If needed, replace the path in the post-build event of the __MarvinServer__ project to copy the binary to the correct place.
+Add a reference to the __MarvinInterface__ project.
 
-If you followed these step correctly, you should now be able tohop in Unity, start the scene with the two components MarvinStarter and MarvinConsumer and test the voice recognition.
+If you followed these step correctly, you should now be able to hop in Unity, start the scene with the two components __MarvinStarter__ and __MarvinConsumer__ and test the voice recognition.
 The initial project being a tactical shooter, the default grammar is loaded with a set of rules of subject and orders.
-To make sure everything is setup correctly, you should now be able to say:
-- Red on me
+To make sure everything is setup correctly, you should now be able to say various orders such as:
+- Red drop a lightstick
 - Everyone follow me
+- Gold toss a bang
 - Blue breach and clear
-- Red open bang and wait
+- open bang and wait
 
 # Grammar syntax
 
