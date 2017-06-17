@@ -21,7 +21,7 @@ Please feel free to send PR if you happen to improve this - I give no warranty r
 
 ### Unity
 
-Copy/paste the files __MarvinConsumer.cs__ and __MarvinStarter.cs__ from __Interface/Unity/__ into your Unity project's assets.
+Copy/paste the files __MarvinConsumer.cs__ and __MarvinStarter.cs__ from __Interfaces/Unity/__ into your Unity project's assets.
 __MarvinStarter__ is a component that spawn the __Server__ process. You must specify the path relative to the project asset data folder to the binary in the component.
 __MarvinConsumer__ is a component to connect to the __Server__, send the grammar and receive the semantic when speech is recognized.
 
