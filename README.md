@@ -54,8 +54,8 @@ Phrase phrase = new Phrase("cmd_open", "execute");
 ```
 
 The syntax for the phrase is:
-- __word__: written with alphanumerical characters or underscore, required by the speech => jump
-- __optional word__: a __word__ preceded by an interogation mark, not required in the speech => ?jump
+- __word__: written with alphanumerical characters or underscore and can be separated by spaces, required by the speech => jump there
+- __optional word__: a __word__ preceded by an interogation mark and not separated by space, not required in the speech => ?jump
 - __anything__: written as an ellipsis, can take the value of any speech but can lead to ambiguity if not careful => ...
 
 A more complex phrase could be:
@@ -74,10 +74,22 @@ While sentences are normally a well defined arrangement of words, the definition
 Here, the sentence is defined as an arrangement of semantic values (from already defined phrases) but also allowing to use value(s), optional value(s) and wildcard.
 The __Sentence__ constructor take a sentence, later used in conjuction with the __Phrase__(s) declared to generate a full permutation set of possible recognizable sentences.
 ```C#
-Sentence sentence = new Sentence("... cmd_open"); TODO
+Sentence sentence = new Sentence("... cmd_open");
 ```
 
-The syntax for the phrase is: TODO
-- __word__: written with alphanumerical characters or underscore, required by the speech => jump
-- __optional word__: a __word__ preceded by an interogation mark, not required in the speech => ?jump
+The syntax for the phrase is:
+- __value__: written with alphanumerical characters or underscore, required by the speech => jump
+- __values__: multiple __value__ surrounded by parenthesis and separated by a pipe => (jump|run|cmd_open)
+- __optional value__: a __value__ preceded by an interogation mark and not separated by space, not required in the speech => ?jump
+- __optional values__: __values__ preceded by anow interogation mark, not required in the speech => ?(jump|run|cmd_open)
 - __anything__: written as an ellipsis, can take the value of any speech but can lead to ambiguity if not careful => ...
+
+A more complex sentence could be:
+```C#
+Sentence sentence = new Sentence("... (cmd_open|jump|run) ?and ?(cmd_open|jump|run)");
+```
+Resulting in the following permutations: TODO
+- deploy ... light stick ... and
+- deploy ... light stick ...
+- deploy ... stick ... and
+- deploy ... stick ...
