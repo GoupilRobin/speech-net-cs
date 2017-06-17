@@ -35,6 +35,8 @@ If you happen to create an interface that we are missing consider sending a PR s
 I strongly suggest adding the __MarvinInterface__ project to your Visual Studio Unity project.  
 If needed, replace the path in the post-build event of the __MarvinInterface__ project to copy the binary to the correct place.
 
+It contains the classes __Configuration__ (explicit enough), __Phrase__ (described later),  __Utils__ (only used for serialization/deserialization helpers so far) and __HandshakeRequest__ (sent by the Client to the Server, contains the grammar).
+
 ## Marvin Server
 I strongly suggest adding the __MarvinServer__ project to your Visual Studio Unity project.  
 If needed, replace the path in the post-build event of the __MarvinServer__ project to copy the binary to the correct place.
