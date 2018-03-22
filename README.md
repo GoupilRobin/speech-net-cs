@@ -13,7 +13,7 @@ If the Server crash, the client continuously try to spawn it again.
 The server only send the semantic sentences, which allow the receiver to easily understand the result of the speech when multiple phrases mean the same thing.
 For instance: "I am good", "I am fine", "I am OK" and simply "good" could all be understood as "user_ok", making easier to use the final result.
 
-Please feel free to send PR if you happen to improve this - I give no warranty regarding the delays but will do my best.
+Please feel free to send PR if you happen to improve this.
 
 # How to setup
 
